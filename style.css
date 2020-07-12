@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    background-color: teal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    
+}
+#date {
+    background: unset;
+    float: right;
+    margin-right: 10px;
+    font-size: 18px;
+}
+header{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+#mainDiv{
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    box-shadow: .4px .4px .8px 1.7px #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+#welcomeDiv {
+    margin: 20px 15px 10px;
+    box-shadow: .3px .3px .7px 1px #ccc;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    display: inline;
+}
+h1 {
+    font-size: 40px;
+    padding: 5px 0 5px 25px;
+}
+h2 {
+    font-size: 25px;
+    padding: 10px 0 5px 20px;
+    margin: 20px 0;
+}
+.subsequentDivs {
+    box-sizing: border-box;
+    margin: 8px 25px;
+    box-shadow: .3px .3px .7px 1px #ccc;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: inline;
+    transition: .50s ease-in-out;
+}
+
+/* COLORING THE SUBSEQUENT DIVS */
+
+.grey {
+    background: #54544f;
+}
+.blue {
+    background: #0367fc;
+}
+.yello {
+    background: #fc9d03;
+}
+.green {
+    background: #189952;
+}
+.red {
+    background: #fff;
+}
+h3 {
+    background: unset;
+    margin-top: 5px;
+    font-size: 19px;
+    color: #fff;
+}
+.figures {
+    float: right;
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 15px;
+    background: unset;
+    color: #fff;
+    text-shadow: #000;
+    padding-bottom: 5px;
+}
+
+/* TABLE SECTION STYLING */
+#tableMainDiv {
+    margin: 20px 10px;
+    box-shadow: .3px .3px .7px 1px #ccc;
+    border-radius: 10px;
+}
+#tableDiv {
+    margin: 0 10px;
+    box-shadow: .3px .3px .7px 1px #ccc;
+    border-radius: 10px;
+    position: static;
+    overflow: auto;
+}
+table{
+    border-collapse: collapse;
+    width: 450px;
+    color: #fff;
+    
+}
+tr:nth-child(even) {
+    background-color: #fff;
+}
+tr:nth-child(odd) {
+    background-color: #ddd;
+}
+table, tr:last-of-type {
+    border-bottom: 2px solid teal;
+}
+th {
+    background: teal;
+    text-align: center;
+    width: 60px;
+    border-bottom: 2px solid rgb(173, 168, 168);
+    border-right: 2px solid rgb(173, 168, 168);
+}
+.smallWidth {
+    width: 40px !important;
+}
+td {
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px 0;
+    border-right: 2px solid rgb(173, 168, 168);;
+    border-bottom: 2px solid rgb(173, 168, 168);;
+    font-size: 17px;
+    color: #000;
+}
+
+/* Highlights Section Styling */
+
+#highlightMainDiv{
+    width: 100%;
+    margin: 20px auto;
+}
+#highlight{
+    margin: 20px;
+    box-shadow: .3px .3px .7px 1px #ccc;
+    border-radius: 10px;
+    padding: 10px 0;
+    transform: translateY(-0.1rem);
+    transition: 1s transform;
+}
+#highlight:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 2px #009879;
+    transform: translateY(-0.1rem);
+    transition: 1s transform;
+}
+#highlight ul li{
+    line-height: 1.5;
+    font-size: 17px;
+    margin: 10px 0 0 25px;
+
+}
+
+/* TWEETS SECTION STYLING */
+#tweetsMainDiv{
+    box-shadow: .3px .3px .7px 1px #ccc;
+    border-radius: 10px;
+    padding: 10px 0;
+    margin: 20px 15px;
+}
+#tweets {
+    border-radius: 10px;
+    padding: 0 0 10px;
+    height: 500px;
+    overflow: auto;
+}
+.tweet{
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+/* VIDEO TIPS SECTION STYLING */
+
+#videoTipsMainDiv{
+    margin: 20px 0;
+    padding: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.videoTips{
+    display: flex;
+    justify-content: center;
+    box-shadow: .3px .3px .7px 1px #ccc;
+    border-radius: 10px;
+    margin: 10px 10px 20px;
+    padding: 8px 0;
+}
+iframe {
+    width: 320px;
+    border-radius: 10px;
+}
+/* Footer */
+footer{
+    overflow: hidden;
+    width: calc(100% - 20px);
+    margin: 20px 10px;
+}
+#bio {
+    margin: 20px 10px;
+    border: #fff dotted;
+    border-radius: 10px;
+}
+#about {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #fff;
+    padding: 10px;
+}
+.anchorTag{
+    text-decoration: none;
+    color: #fff;
+    border-bottom: #fff dotted;
+
+}
+#copyright{
+    font-size: 17px;
+    text-align: center;
+    color: #ddd;
+}
