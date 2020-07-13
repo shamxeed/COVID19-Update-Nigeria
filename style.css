@@ -10,16 +10,12 @@
     
 }
 #date {
-    background: unset;
     float: right;
     margin-right: 10px;
     font-size: 18px;
 }
 header{
     height: 80px;
-    display: flex;
-    justify-content: center;
-    place-items: center;
 }
 #mainDiv{
     width: calc(100% - 20px);
@@ -31,17 +27,21 @@ header{
     display: flex;
     flex-direction: column;
 }
+#cases {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 #welcomeDiv {
-    margin: 20px 15px 10px;
+    margin: 20px 15px 20px;
     box-shadow: .3px .3px .7px 1px #ccc;
     border-radius: 10px;
     padding-top: 5px;
-    padding-bottom: 10px;
-    display: inline;
+    padding-bottom: 15px;
 }
 h1 {
     font-size: 40px;
-    padding: 5px 0 5px 25px;
+    padding: 0 0 5px 25px;
 }
 h2 {
     font-size: 25px;
@@ -49,16 +49,18 @@ h2 {
     margin: 20px 0;
 }
 .subsequentDivs {
-    box-sizing: border-box;
     margin: 8px 25px;
     box-shadow: .3px .3px .7px 1px #ccc;
     border-radius: 10px;
     padding-top: 10px;
     padding-left: 10px;
-    display: inline;
     transition: .50s ease-in-out;
 }
-
+.subsequentDivs:hover {
+    cursor: pointer;
+    transition: 1.30s ease-in-out;
+    transform: rotate(360deg);
+}
 /* COLORING THE SUBSEQUENT DIVS */
 
 .grey {
@@ -77,24 +79,71 @@ h2 {
     background: #fff;
 }
 h3 {
-    background: unset;
     margin-top: 5px;
     font-size: 19px;
     color: #fff;
 }
 .figures {
-    float: right;
     margin-top: 10px;
     font-size: 32px;
     font-weight: bold;
     margin-right: 15px;
-    background: unset;
     color: #fff;
     text-shadow: #000;
     padding-bottom: 5px;
+    float: right;
+}
+#tableMainDiv:hover,#highlight:hover,#tweetsMainDiv:hover,.videoTips:hover,#welcomeDiv:hover{
+	cursor: pointer;
+	box-shadow: 0 0.4rem 1.4rem 0 rgba(0,0,0,.8);
+	transform: translateY(-0.01rem);
+	transition: transform 150ms;
+}
+/* DESTOP VERSION STYLING */
+@media (min-width: 1000px){
+    #mainDiv{
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    #cases {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #welcomeDiv {
+        width: 790px;
+        margin: 20px 15px 10px;
+        padding-bottom: 5px;
+    }
+    h1 {
+        font-size: 38px;
+        padding: 5px 0 0 15px;
+    }
+    .subsequentDivs {
+        width: 255px;
+        margin: 8px 10px;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+    .grey {
+        margin-top: 20px;
+    }
+    .figures {
+        margin-top: 5px;
+    }
+    #date {
+        line-height: unset;
+    }
+
 }
 
 /* TABLE SECTION STYLING */
+#table_to_tweets{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 #tableMainDiv {
     margin: 20px 10px;
     box-shadow: .3px .3px .7px 1px #ccc;
@@ -104,14 +153,12 @@ h3 {
     margin: 0 10px;
     box-shadow: .3px .3px .7px 1px #ccc;
     border-radius: 10px;
-    position: static;
     overflow: auto;
 }
 table{
     border-collapse: collapse;
     width: 450px;
-    color: #fff;
-    
+    color: #fff;  
 }
 tr:nth-child(even) {
     background-color: #fff;
@@ -143,6 +190,11 @@ td {
 }
 
 /* Highlights Section Styling */
+#highlight_to_tweets {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 #highlightMainDiv{
     width: 100%;
@@ -153,14 +205,6 @@ td {
     box-shadow: .3px .3px .7px 1px #ccc;
     border-radius: 10px;
     padding: 10px 0;
-    transform: translateY(-0.1rem);
-    transition: 1s transform;
-}
-#highlight:hover{
-    cursor: pointer;
-    box-shadow: 1px 1px 2px 2px #009879;
-    transform: translateY(-0.1rem);
-    transition: 1s transform;
 }
 #highlight ul li{
     line-height: 1.5;
@@ -188,18 +232,77 @@ td {
 
 }
 
+/* STYLING DESKTOP VERSION (TABLE TO TWEETS) */
+@media (min-width: 1000px){
+    #table_to_tweets{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+    #tableMainDiv {
+        margin: 20px 10px;
+        margin-right: 0;
+        padding-bottom: 20px;
+    }
+    table{
+        width: 600px; 
+    }
+    th {
+        padding: 10px 0;
+    }
+    th, td {
+        text-align: left;
+        padding-left: 7px;
+    }
+    #deathColumn{
+        border-right: none;
+    }
+    #highlightMainDiv{
+        width: 470px;
+        margin: 0;
+    }
+    #tweetsMainDiv{
+        width: 430px;
+        padding: 10px 0;
+        margin: 0 20px;
+    }
+    #highlight_to_tweets {
+        width: 470px;
+    }
+}
+
+/* TABLET VERSION */
+@media (max-width: 950px) and (min-width: 600px){
+
+    table{
+        width: 100%;
+
+    }
+    th {
+        padding: 20px;
+    }
+    
+}
+
 /* VIDEO TIPS SECTION STYLING */
 
 #videoTipsMainDiv{
+    display: flex;
+    flex-direction: column;
     margin: 20px 0;
     padding: 10px 0;
     border-radius: 10px;
     overflow: hidden;
 }
+#videoTipsDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .videoTips{
     display: flex;
     justify-content: center;
-    box-shadow: .3px .3px .7px 1px #ccc;
+    box-shadow: .3px .3px .7px 1.8px #ccc;
     border-radius: 10px;
     margin: 10px 10px 20px;
     padding: 8px 0;
@@ -207,6 +310,30 @@ td {
 iframe {
     width: 320px;
     border-radius: 10px;
+}
+
+/* STYLING VIDEO TIPS SECTION, DESKTOP VERSION */
+@media (min-width: 1000px){
+    #videoTipsMainDiv{
+        width: calc(100% - 20px);
+        margin: 50px 10px 20px;
+        box-shadow: .8px .6px .7px 1.8px #ccc;
+        border-radius: 10px;
+        place-items: center;
+        padding-bottom: 0;
+        
+    }
+    #videoTipsDiv{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .videoTips {
+        margin: 10px 5px 20px;
+        padding: 8px 5px;
+    }
+    iframe {
+        width: 340px;
+    }
 }
 /* Footer */
 footer{
@@ -235,4 +362,11 @@ footer{
     font-size: 17px;
     text-align: center;
     color: #ddd;
+}
+/* FOOTER STYLING DESKTOP VERSION */
+@media (min-width: 1000px){
+    footer {
+        width: 500px;
+        margin: 40px auto 20px;
+    }
 }

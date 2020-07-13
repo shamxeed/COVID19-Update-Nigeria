@@ -1,3 +1,4 @@
+const main = document.getElementById('main');
 const date = document.getElementById('date');
 const blink = document.getElementById('blink');
 const sample = document.getElementById('sample');
@@ -42,36 +43,40 @@ gettingAPI = ()=>{
     request.open('GET', 'https://covidnigeria.herokuapp.com/api', true);
 
     request.onload = ()=>{
-        data = JSON.parse(request.responseText);
+            data = JSON.parse(request.responseText);
 
-        let output = '';
+            let output = '';
 
-        for (let i in data){
+                for (let i in data){
 
-            sample.innerHTML = data[i].totalSamplesTested;
-            confirmedCases.innerHTML = data[i].totalConfirmedCases;
-            activeCases.innerHTML = data[i].totalActiveCases;
-            discharged.innerHTML = data[i].discharged;
-            death.innerHTML = data[i].death;
-            
-            //LETS GET THE STATES INDEX
-            let s = data[i].states;
+                    sample.innerHTML = data[i].totalSamplesTested;
+                    confirmedCases.innerHTML = data[i].totalConfirmedCases;
+                    activeCases.innerHTML = data[i].totalActiveCases;
+                    discharged.innerHTML = data[i].discharged;
+                    death.innerHTML = data[i].death;
+                    
+                    //LETS GET THE STATES INDEX
+                    let s = data[i].states;
 
-            //NOW WE CAN LOOP THROUGH THEM
-            for(let ii in s){
+                    //NOW WE CAN LOOP THROUGH THEM
+                    for(let ii in s){
 
-                output += '</tr>'+'<tr>'+'<td>'+s[ii].state+'</td>'+'<td>'+s[ii].confirmedCases+'</td>'+'<td>'+s[ii].casesOnAdmission+'</td>'+'<td>'+s[ii].discharged+'</td>'+'<td>'+s[ii].death+'</td>';
-            }
-           
-            table.insertAdjacentHTML("beforeend", output);
-            
-        }
-       
+                        output += '</tr>'+'<tr>'+'<td>'+s[ii].state+'</td>'+'<td>'+s[ii].confirmedCases+'</td>'+'<td>'+s[ii].casesOnAdmission+'</td>'+'<td>'+s[ii].discharged+'</td>'+'<td id="deathColumn">'+s[ii].death+'</td>';
+                    }
+                
+                    table.insertAdjacentHTML("beforeend", output);   
+                 }
+                 
     }
-    request.send();
+    //WHILE ON PROGRESS 
+    request.onprogress = ()=>{
+        main.innerHTML = 'Loading data from the server, please wait...';
+    }
+    //IF IN CASE ANYTHING GOES WRONG, LET'S ALERT THE CLIENT
+    request.onerror = ()=>{
+        alert('Error occured, unable to communicate with the server.')
+}
 
+    request.send();
 }
 gettingAPI();
-
-
-
