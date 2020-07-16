@@ -68,13 +68,7 @@ gettingAPI = ()=>{
                  }
                  
     }
-    //WHILE ON PROGRESS 
-    request.onprogress = ()=>{
-        setTimeout(()=>{
-            main.innerHTML = 'Loading data from the server, please wait...';
-        }, 5000)
-        
-    }
+
     //IF IN CASE ANYTHING GOES WRONG, LET'S ALERT THE CLIENT
     request.onerror = ()=>{
         alert('Error occured, unable to communicate with the server.')
