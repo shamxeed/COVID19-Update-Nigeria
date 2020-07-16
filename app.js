@@ -1,4 +1,4 @@
-const main = document.getElementById('main');
+const main = document.getElementById('mainDiv');
 const date = document.getElementById('date');
 const blink = document.getElementById('blink');
 const sample = document.getElementById('sample');
