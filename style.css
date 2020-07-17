@@ -220,6 +220,7 @@ td {
     margin: 20px 15px;
 }
 #tweets {
+    width: 100%;
     border-radius: 10px;
     padding: 0 0 10px;
     height: 500px;
