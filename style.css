@@ -95,7 +95,7 @@ h3 {
 }
 #tableMainDiv:hover,#highlight:hover,#tweetsMainDiv:hover,.videoTips:hover,#welcomeDiv:hover{
 	cursor: pointer;
-	box-shadow: 0 0.4rem 1.4rem 0 rgba(0,0,0,.8);
+	box-shadow: 0 0.4rem 1rem 0 rgba(0,0,0,.6);
 	transition: transform 150ms;
 }
 /* DESTOP VERSION STYLING */
