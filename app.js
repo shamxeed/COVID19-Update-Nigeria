@@ -71,7 +71,7 @@ gettingAPI = ()=>{
 
     //IF IN CASE ANYTHING GOES WRONG, LET'S ALERT THE CLIENT
     request.onerror = ()=>{
-        alert('Error occured, unable to communicate with the server at the moment. If the problem persist please inform the developer @twiter.com/shamxeed05')
+        alert('Error occured, unable to communicate with the server at the moment. If you keep getting this error message, please inform the developer @twiter.com/shamxeed05')
 }
 
     request.send();
