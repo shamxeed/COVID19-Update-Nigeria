@@ -37,7 +37,6 @@ setInterval(()=>{
 },400)
 
 //GETTING THE API
-
 gettingAPI = ()=>{
     let request = new XMLHttpRequest();
     request.open('GET', 'https://covidnigeria.herokuapp.com/api', true);
@@ -49,11 +48,38 @@ gettingAPI = ()=>{
 
                 for (let i in data){
 
-                    sample.innerHTML = data[i].totalSamplesTested;
-                    confirmedCases.innerHTML = data[i].totalConfirmedCases;
-                    activeCases.innerHTML = data[i].totalActiveCases;
-                    discharged.innerHTML = data[i].discharged;
-                    death.innerHTML = data[i].death;
+                    //VARIABLES......
+                    let totalSample = data[i].totalSamplesTested;
+                    let totalConfirmedCases = data[i].totalConfirmedCases;
+                    let totalActiveCases = data[i].totalActiveCases;
+                    let totalDischargedCases = data[i].discharged;
+                    let totalDeaths = data[i].death;
+
+
+                    //CONVERTING THE ABOVE VARIABLES TO STRINGS THEN TO ARRAYS
+                    totalSample = totalSample.toString().split("");
+                    totalConfirmedCases = totalConfirmedCases.toString().split("");
+                    totalActiveCases = totalActiveCases.toString().split("");
+                    totalDischargedCases = totalDischargedCases.toString().split("");
+                    
+                    //SPLICING THROUGH THEM TO ADD A COMMA SIGN
+                    totalSample.splice(-3, 0, ",")
+                    totalConfirmedCases.splice(-3, 0, ",")
+                    totalActiveCases.splice(-3, 0, ",")
+                    totalDischargedCases.splice(-3, 0, ",")
+
+                   if(totalDeaths >= 1000){
+                     totalDeaths = totalDeaths.toString().split("");
+                     totalDeaths = totalDeaths.splice(-3, 0, ",");
+                     totalDeaths = totalDeaths.join("");
+                   }
+
+                   //JOINING THE ARRAYS TO LOOK LIKE STRINGS EVEN THOUGH THEY'RE ARRAYS
+                    sample.innerHTML = totalSample.join("");
+                    confirmedCases.innerHTML = totalConfirmedCases.join("");
+                    activeCases.innerHTML = totalActiveCases.join("")
+                    discharged.innerHTML = totalDischargedCases.join("")
+                    death.innerHTML = totalDeaths;
                     
                     //LETS GET THE STATES INDEX
                     let s = data[i].states;

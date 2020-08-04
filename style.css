@@ -85,7 +85,7 @@ h3 {
 }
 .figures {
     margin-top: 10px;
-    font-size: 32px;
+    font-size: 25px;
     font-weight: bold;
     margin-right: 15px;
     color: #fff;
@@ -151,7 +151,7 @@ h3 {
 #tableDiv {
     margin: 0 10px;
     box-shadow: .3px .3px .7px 1px #ccc;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: auto;
 }
 table{
@@ -180,8 +180,9 @@ th {
 }
 td {
     margin-top: 10px;
-    text-align: center;
+    text-align: left;
     padding: 5px 0;
+    padding-left: 3px;
     border-right: 2px solid rgb(173, 168, 168);;
     border-bottom: 2px solid rgb(173, 168, 168);;
     font-size: 17px;
@@ -354,7 +355,9 @@ footer{
 }
 .anchorTag{
     text-decoration: none;
-    color: #fff;
+    font-weight: bold;
+    color: rgb(18, 71, 124);
+    text-shadow: 1px 1px #aaa;
     border-bottom: #fff dotted;
 
 }
