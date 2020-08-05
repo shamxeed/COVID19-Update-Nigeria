@@ -318,12 +318,11 @@ iframe {
 @media (min-width: 1000px){
     #videoTipsMainDiv{
         width: calc(100% - 20px);
-        margin: 50px 10px 20px;
+        margin: 30px 10px 20px;
         box-shadow: .8px .6px .7px 1.8px #ccc;
         border-radius: 10px;
         place-items: center;
-        padding-bottom: 0;
-        
+        padding-bottom: 0;      
     }
     #videoTipsDiv{
         flex-direction: row;
