@@ -12,7 +12,7 @@
 #date {
     float: right;
     margin-right: 10px;
-    font-size: 18px;
+    font-size: 17px;
 }
 header{
     height: 80px;
@@ -49,7 +49,7 @@ h2 {
     margin: 20px 0;
 }
 .subsequentDivs {
-    margin: 8px 25px;
+    margin: 4px 25px;
     box-shadow: .3px .3px .7px 1px #ccc;
     border-radius: 10px;
     padding-top: 10px;
@@ -116,8 +116,8 @@ h3 {
         padding-bottom: 5px;
     }
     h1 {
-        font-size: 38px;
-        padding: 5px 0 0 15px;
+        font-size: 35px;
+        padding: 3px 0 0 15px;
     }
     .subsequentDivs {
         width: 255px;
@@ -127,6 +127,7 @@ h3 {
     }
     .grey {
         margin-top: 20px;
+        margin-bottom: 10px;
     }
     .figures {
         margin-top: 5px;
