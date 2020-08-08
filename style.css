@@ -211,6 +211,7 @@ td {
     line-height: 1.5;
     font-size: 17px;
     margin: 10px 0 0 25px;
+    color: rgba(0,0,0,.8);
 
 }
 
@@ -266,22 +267,22 @@ td {
     #highlight_to_tweets {
         width: 470px;
     }
-    #tweetsMainDiv{
-        width: 430px;
-        padding: 10px 0;
-        margin: 0 20px;
-    }
     #highlight{
         margin: 10px;
         padding-right: 5px;
     }
     #highlight ul li{
-        line-height: 1.5;
         font-size: 16px;
-        margin: 10px 0 0 25px;
-        color: rgba(0,0,0,.8);
-    
     }
+    #tweetsMainDiv{
+        width: 450px;
+        padding: 10px 0;
+        margin: 0 10px;
+    }
+    #tweets {
+        overflow-y: scroll;
+    }
+    
 }
 
 /* TABLET VERSION */
