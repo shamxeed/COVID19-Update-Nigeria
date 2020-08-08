@@ -13,6 +13,7 @@
     float: right;
     margin-right: 10px;
     font-size: 17px;
+    color: rgba(0,0,0,.7);
 }
 
 #mainDiv{
@@ -210,7 +211,7 @@ td {
     line-height: 1.5;
     font-size: 16px;
     margin: 10px 0 0 25px;
-    color: rgba(0,0,0,.8);
+    color: rgba(0,0,0,.7);
 
 }
 
@@ -252,11 +253,13 @@ td {
     th {
         padding: 10px 0;
     }
-    th, td {
+    th {
         text-align: left;
-        padding-left: 7px;
+        padding-left: 5px;
     }
     td {
+        text-align: left;
+        padding-left: 6px;
         color: rgba(0,0,0,.7);
     }
     #deathColumn{
