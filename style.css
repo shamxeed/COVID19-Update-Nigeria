@@ -96,7 +96,7 @@ h3 {
 #tableMainDiv:hover,#highlight:hover,#tweetsMainDiv:hover,.videoTips:hover,#welcomeDiv:hover{
 	cursor: pointer;
 	box-shadow: 0 0.4rem 0.8rem 0 rgba(0,0,0,.6);
-	transition: transform 150ms;
+	transition: 1s transform;
 }
 /*------- DESTOP VERSION STYLING --------*/
 @media (min-width: 1000px){
@@ -148,12 +148,11 @@ h3 {
 #tableMainDiv {
     margin: 20px 10px;
     box-shadow: .3px .3px .7px 1px #ccc;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 #tableDiv {
     margin: 0 10px;
     box-shadow: .3px .3px .7px 1px #ccc;
-    border-radius: 5px;
     overflow: auto;
 }
 table{
@@ -204,7 +203,7 @@ td {
 #highlight{
     margin: 20px;
     box-shadow: .3px .3px .7px 1px #ccc;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px 0;
 }
 #highlight ul li{
@@ -218,7 +217,7 @@ td {
 /* TWEETS SECTION STYLING */
 #tweetsMainDiv{
     box-shadow: .3px .3px .7px 1px #ccc;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px 0;
     margin: 20px 15px;
 }
@@ -276,9 +275,6 @@ td {
         margin: 10px;
         padding-right: 5px;
     }
-    #highlight ul li{
-        font-size: 16px;
-    }
     #tweetsMainDiv{
         width: 450px;
         padding: 10px 0;
@@ -311,7 +307,7 @@ td {
     flex-direction: column;
     margin: 20px 0;
     padding: 10px 0;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
 }
 #videoTipsDiv{
