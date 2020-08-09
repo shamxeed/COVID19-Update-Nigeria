@@ -220,7 +220,7 @@ td {
     box-shadow: .3px .3px .7px 1px #ccc;
     border-radius: 5px;
     padding: 10px 0;
-    margin: 20px 15px;
+    margin: 0 10px;
 }
 #tweets {
     width: 100%;
