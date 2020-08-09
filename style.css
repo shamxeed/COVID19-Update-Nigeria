@@ -146,7 +146,7 @@ h3 {
     margin-top: 0;
 }
 #tableMainDiv {
-    margin: 20px 10px;
+    margin: 20px 10px 0;
     box-shadow: .3px .3px .7px 1px #ccc;
     border-radius: 5px;
 }
@@ -189,7 +189,7 @@ td {
     color: rgba(0,0,0,.8);
 }
 
-/* Highlights Section Styling */
+/*--------- Highlights Section Styling -----------*/
 #highlight_to_tweets {
     width: 100%;
     display: flex;
@@ -198,13 +198,14 @@ td {
 
 #highlightMainDiv{
     width: 100%;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 #highlight{
-    margin: 20px;
+    margin: 10px;
     box-shadow: .3px .3px .7px 1px #ccc;
     border-radius: 5px;
     padding: 10px 0;
+    padding-right: 3px;
 }
 #highlight ul li{
     line-height: 1.5;
@@ -357,33 +358,33 @@ footer{
     margin: 20px 10px;
 }
 #bio {
-    margin: 20px 10px;
+    margin: 20px 10px 10px;
     border: #fff dotted;
     border-radius: 10px;
 }
 #about {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.5;
     color: #fff;
     padding: 10px;
 }
-.anchorTag{
-    text-decoration: none;
-    font-weight: bold;
-    color: rgb(18, 71, 124);
-    text-shadow: 1px 1px #aaa;
-    border-bottom: #fff dotted;
-
+ #followBtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
 }
 #copyright{
-    font-size: 17px;
+    font-size: 16px;
     text-align: center;
     color: #ddd;
 }
 /* FOOTER STYLING DESKTOP VERSION */
 @media (min-width: 1000px){
     footer {
-        width: 500px;
+        max-width: 500px;
         margin: 40px auto 20px;
+    }
+    #about {
+        padding-right: 0;
     }
 }
