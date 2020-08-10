@@ -41,11 +41,13 @@
 h1 {
     font-size: 40px;
     padding: 0 0 5px 25px;
+    color: #000;
 }
 h2 {
     font-size: 25px;
     padding: 10px 0 5px 20px;
     margin: 20px 0;
+    color: #000;
 }
 .subsequentDivs {
     margin: 4px 25px;
@@ -232,7 +234,7 @@ td {
 
 }
 .twitter-tweet {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 /* STYLING DESKTOP VERSION (TABLE TO TWEETS) */
 @media (min-width: 1000px){
@@ -280,7 +282,7 @@ td {
         margin: 0 10px;
     }
     #tweets {
-        height: 790px;
+        height: 700px;
         overflow-y: scroll;
     }
     
