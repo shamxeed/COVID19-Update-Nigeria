@@ -46,7 +46,7 @@ h1 {
 h2 {
     font-size: 25px;
     padding: 10px 0 5px 20px;
-    margin: 20px 0;
+    margin: 10px 0;
     color: #000;
 }
 .subsequentDivs {
@@ -229,7 +229,7 @@ td {
     overflow: auto;
 }
 .tweet{
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 20px;
 
 }
@@ -282,7 +282,7 @@ td {
         margin: 0 10px;
     }
     #tweets {
-        height: 700px;
+        height: 650px;
         overflow-y: scroll;
     }
     
