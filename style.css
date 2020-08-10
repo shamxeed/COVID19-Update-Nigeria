@@ -234,7 +234,6 @@ td {
     margin-bottom: 20px;
 
 }
-
 /* STYLING DESKTOP VERSION (TABLE TO TWEETS) */
 @media (min-width: 1000px){
     #table_to_tweets{
