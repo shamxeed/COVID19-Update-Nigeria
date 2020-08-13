@@ -60,7 +60,7 @@ h2 {
 .subsequentDivs:hover {
     cursor: pointer;
     transition: 1.30s ease-in-out;
-    transform: rotate(360deg);
+    transform: rotateY(360deg);
 }
 /* COLORING THE SUBSEQUENT DIVS */
 
