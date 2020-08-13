@@ -292,45 +292,38 @@ td {
 #videoTipsMainDiv{
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
-    padding: 10px 0;
+    justify-content: center;
+    place-items: center;
+    margin: 10px 0;
+    padding: 10px 10px;
     border-radius: 5px;
     overflow: hidden;
 }
-#videoTipsDiv{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
 .videoTips{
+    width: 100%;
     display: flex;
     justify-content: center;
     box-shadow: .3px .3px .7px 1.8px #ccc;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 10px 10px 0;
     padding: 8px 0;
 }
 iframe {
     width: 320px;
-    border-radius: 10px;
 }
 
 /* STYLING VIDEO TIPS SECTION, DESKTOP VERSION */
 @media (min-width: 1000px){
     #videoTipsMainDiv{
         width: calc(100% - 20px);
-        margin: 0 10px 20px;
-        box-shadow: .8px .6px .7px 1.8px #ccc;
+        flex-direction: row;
+        margin: 10px 10px 20px;
         border-radius: 10px;
         place-items: center;
-        padding-bottom: 0;      
-    }
-    #videoTipsDiv{
-        flex-direction: row;
-        justify-content: center;
+        padding: 0 10px;      
     }
     .videoTips {
-        margin: 10px 5px 20px;
+        margin: 10px 5px 10px;
         padding: 8px 5px;
     }
     iframe {
