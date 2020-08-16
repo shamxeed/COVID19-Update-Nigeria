@@ -40,7 +40,7 @@
     padding-bottom: 15px;
 }
 h1 {
-    font-size: 40px;
+    font-size: 35px;
     padding: 0 0 5px 25px;
     color: #000;
 }
@@ -118,7 +118,6 @@ h3 {
         padding-bottom: 5px;
     }
     h1 {
-        font-size: 35px;
         padding: 3px 0 0 15px;
     }
     .subsequentDivs {
@@ -187,7 +186,7 @@ td {
     padding-left: 3px;
     border-right: 2px solid #ddd;
     border-bottom: 2px solid #ddd;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 /*--------- Highlights Section Styling -----------*/
@@ -208,7 +207,7 @@ td {
     padding: 10px 0;
 }
 #highlight ul li{
-    font-size: 16px;
+    font-size: 15px;
     margin: 10px 0 0 25px;
     padding-right: 8px;
     line-height: 1.5;
