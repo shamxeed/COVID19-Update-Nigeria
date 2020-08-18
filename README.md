@@ -6,5 +6,5 @@ it on the screen using some other techniques.
   
   **Live Demo** [Covid-19 Nigeria](https://covid19nigeria.tk)
     
-   ### Sample 👇🏻
+   ### Preview 👇🏻
   ![Sample](https://github.com/shamxeed/COVID19-Update-Nigeria/blob/master/covid19nigeria.png)
