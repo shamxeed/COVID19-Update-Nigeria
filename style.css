@@ -83,7 +83,12 @@ h2 {
 }
 h3 {
     margin-top: 5px;
-    font-size: 19px;
+    font-size: 18px;
+    color: #fff;
+}
+.fas {
+    font-size: 25px;
+    padding-top: 5px;
     color: #fff;
 }
 .figures {
