@@ -143,6 +143,12 @@ h3 {
     #date {
         line-height: unset;
     }
+    h3 {
+        font-size: 1rem;
+    }
+    .fas {
+        font-size: 1.3rem;
+    }
 
 }
 
