@@ -41,8 +41,9 @@
     padding-bottom: 15px;
 }
 h1 {
-    font-size: 35px;
+    font-size: 33px;
     padding: 0 0 5px 10px;
+    line-height: 1.2;
     color: #000;
 }
 h2 {
