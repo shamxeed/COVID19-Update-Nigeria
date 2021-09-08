@@ -4,9 +4,11 @@ const blink = document.getElementById('blink');
 const sample = document.getElementById('sample');
 const confirmedCases = document.getElementById('confirmedCases');
 const activeCases = document.getElementById('activeCases');
-const discharged = document.getElementById('discharged');
-const death = document.getElementById('death');
+const dischargedCard = document.getElementById('discharged');
+const deathCard = document.getElementById('death');
 const table = document.getElementById('table');
+
+const numberWithCommas = x =>  x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 
 
 //DISPLAYING DATE
@@ -31,10 +33,11 @@ window.addEventListener('load', ()=>{
 
     }, 1000)
 })
+
 //DANGER BLINK
 setInterval(()=>{
     blink.style.backgroundColor = blink.style.backgroundColor == 'red' ? '#444' : 'red';
-},400)
+}, 400)
 
 //GETTING THE API
 gettingAPI = ()=>{
@@ -42,58 +45,29 @@ gettingAPI = ()=>{
     request.open('GET', 'https://covidnigeria.herokuapp.com/api', true);
 
     request.onload = ()=>{
-            data = JSON.parse(request.responseText);
+
+            response = JSON.parse(request.responseText);
 
             let output = '';
 
-                for (let i in data){
+            const { totalSamplesTested, totalConfirmedCases, totalActiveCases, discharged, death, states } = response?.data || {}
 
-                    //VARIABLES......
-                    let totalSample = data[i].totalSamplesTested;
-                    let totalConfirmedCases = data[i].totalConfirmedCases;
-                    let totalActiveCases = data[i].totalActiveCases;
-                    let totalDischargedCases = data[i].discharged;
-                    let totalDeaths = data[i].death;
+            sample.innerHTML = numberWithCommas(totalSamplesTested)
+            confirmedCases.innerHTML = numberWithCommas(totalConfirmedCases);
+            activeCases.innerHTML = numberWithCommas(totalActiveCases)
+            dischargedCard.innerHTML = numberWithCommas(discharged)
+            deathCard.innerHTML = numberWithCommas(death)
+            
+            for(let i in states){
 
-
-                    //CONVERTING THE ABOVE VARIABLES TO STRINGS THEN TO ARRAYS
-                    totalSample = totalSample.toString().split("");
-                    totalConfirmedCases = totalConfirmedCases.toString().split("");
-                    totalActiveCases = totalActiveCases.toString().split("");
-                    totalDischargedCases = totalDischargedCases.toString().split("");
-                    totalDeaths = totalDeaths.toString().split("");
-                    
-                    //SPLICING THROUGH THEM TO ADD A COMMA SIGN
-                    totalSample.splice(-3, 0, ",")
-                    totalConfirmedCases.splice(-3, 0, ",")
-                    totalActiveCases.splice(-3, 0, ",")
-                    totalDischargedCases.splice(-3, 0, ",")
-                    totalDeaths.splice(-3, 0, ",");
-
-
-                   //JOINING THE ARRAYS TO LOOK LIKE STRINGS EVEN THOUGH THEY'RE ARRAYS
-                    sample.innerHTML = totalSample.join("");
-                    confirmedCases.innerHTML = totalConfirmedCases.join("");
-                    activeCases.innerHTML = totalActiveCases.join("")
-                    discharged.innerHTML = totalDischargedCases.join("")
-                    death.innerHTML = totalDeaths.join("");
-                    
-                    
-                    //LETS GET THE STATES INDEX
-                    let s = data[i].states;
-
-                    //NOW WE CAN LOOP THROUGH THEM
-                    for(let ii in s){
-
-                        output += '</tr>'+'<tr>'+'<td>'+s[ii].state+'</td>'+'<td>'+s[ii].confirmedCases+'</td>'+'<td>'+s[ii].casesOnAdmission+'</td>'+'<td>'+s[ii].discharged+'</td>'+'<td id="deathColumn">'+s[ii].death+'</td>';
-                    }
-                
-                    table.insertAdjacentHTML("beforeend", output);   
-                 }
+                output += '</tr>'+'<tr>'+'<td>'+states[i].state+'</td>'+'<td>'+states[i].confirmedCases+'</td>'+'<td>'+states[i].casesOnAdmission+'</td>'+'<td>'+states[i].discharged+'</td>'+'<td id="deathColumn">'+states[i].death+'</td>';
+            }
+        
+            table.insertAdjacentHTML("beforeend", output)
                  
     }
 
-    //IF IN CASE ANYTHING GOES WRONG, LET'S ALERT THE CLIENT
+    //IF IN CASE ANYTHING GOES WRONG, LET'S ALERT THE USER
     request.onerror = ()=>{
         alert('An error occured while communicating with the server at the moment. If you keep getting this error message, please inform the developer @twitter.com/shamxeed05')
 }
